@@ -3,6 +3,8 @@
  * use .then and async/fetch
  */
 
+import { data } from "autoprefixer"
+
 export async function randomTen() {
     const resp = await fetch('https://animechan.vercel.app/api/quotes')
     const data = await resp.json()
@@ -10,9 +12,9 @@ export async function randomTen() {
 }
 
 export function randomTen2() {
-    fetch('https://animechan.vercel.app/api/quotes')
+    const resp = fetch('https://animechan.vercel.app/api/quotes')
     .then(resp => resp.json())
-    .then(quotes => console.log(quotes))
+    return resp;
 }
 /**
  * TODO:
