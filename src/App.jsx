@@ -1,3 +1,10 @@
+import { randomTen, randomTen2 } from "./services/promise-me";
+
 export default function App() {
-  return <h1>Hello World</h1>;
+  
+  console.log(randomTen())
+  console.log(randomTen2())
+  return <h1>Hello World</h1>
+
+  ;
 }
